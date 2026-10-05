@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TaskFlow — To-Do App</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="to-do.css">
+
+</head><body><div class="app-container">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <p class="welcome">Welcome back 👋</p>
+            <h1>My Tasks</h1>
+        </div>
+
+        <div class="date-box">
+            <span id="currentDate"></span>
+        </div>
+    </header>
+
+
+    <!-- Progress Card -->
+    <section class="progress-card">
+
+        <div class="progress-info">
+            <div>
+                <span class="progress-label">Today's Progress</span>
+                <h2><span id="completedCount">0</span> / <span id="totalCount">0</span> tasks completed</h2>
+            </div>
+
+            <div class="progress-percent" id="progressPercent">
+                0%
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+    </section>
+
+
+    <!-- Add Task -->
+    <section class="add-task-card">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="What do you need to accomplish?"
+            autocomplete="off"
+        >
+
+        <button id="addTaskBtn">
+            <span>+</span>
+            Add Task
+        </button>
+
+    </section>
+
+
+    <!-- Toolbar -->
+    <section class="toolbar">
+
+        <!-- Search -->
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Tasks -->
+    <main>
+
+        <div class="tasks-header">
+            <h3>Your Tasks</h3>
+
+            <button id="clearCompleted">
+                Clear completed
+            </button>
+        </div>
+
+        <div id="taskList" class="task-list">
+            <!-- Tasks will be added here using JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+
+            <div class="empty-icon">
+                ✓
+            </div>
+
+            <h3>No tasks here</h3>
+
+            <p>
+                Add a task and start getting things done!
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>TaskFlow • Stay productive, stay focused 🚀</p>
+    </footer>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="to-do.js"></script>
+
+</body>
+</html>w
